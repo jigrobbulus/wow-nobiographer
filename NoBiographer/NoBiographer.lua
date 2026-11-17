@@ -27,8 +27,19 @@ local function Filter(_, _, msg, _, _, _, _, _, _, _, _, _, lineID)
   return false
 end
 
-ChatFrame_AddMessageEventFilter("CHAT_MSG_GUILD", Filter)
-ChatFrame_AddMessageEventFilter("CHAT_MSG_OFFICER", Filter)
+-- Classic clients have the global; newer ones (possibly WoW Forever) may
+-- only have it under ChatFrameUtil.
+local AddFilter = ChatFrame_AddMessageEventFilter
+  or (ChatFrameUtil and ChatFrameUtil.AddMessageEventFilter)
+
+if (AddFilter) then
+  AddFilter("CHAT_MSG_GUILD", Filter)
+  AddFilter("CHAT_MSG_OFFICER", Filter)
+else
+  C_Timer.After(5, function()
+    print("|cff88ccffNoBiographer|r: this client has no chat filter API, so AutoBiographer posts can't be hidden. Please report this on GitHub.")
+  end)
+end
 
 local loader = CreateFrame("Frame")
 loader:RegisterEvent("ADDON_LOADED")

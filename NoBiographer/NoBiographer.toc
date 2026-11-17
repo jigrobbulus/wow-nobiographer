@@ -2,7 +2,7 @@
 ## Title: NoBiographer
 ## Notes: Hides AutoBiographer milestone spam from guild chat.
 ## Author: jigrobbulus
-## Version: 1.0.0
+## Version: 1.0.1
 ## SavedVariables: NoBiographerDB
 
 NoBiographer.lua
