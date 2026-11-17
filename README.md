@@ -12,11 +12,14 @@ NoBiographer filters any guild or officer chat line that starts with `[AutoBiogr
 
 ## Install
 
-Copy the `NoBiographer` folder into your AddOns directory, for example:
+1. Download **[NoBiographer.zip](https://github.com/jigrobbulus/wow-nobiographer/releases/latest/download/NoBiographer.zip)** from the latest release.
+2. Unzip it into your AddOns directory, so you end up with:
 
-```
-World of Warcraft/_classic_era_/Interface/AddOns/NoBiographer
-```
+   ```
+   World of Warcraft/_classic_era_/Interface/AddOns/NoBiographer/NoBiographer.toc
+   ```
+
+Don't use GitHub's green "Code → Download ZIP" button. It wraps the addon in an extra folder and WoW won't load it.
 
 The TOC lists Classic Era/Anniversary, TBC and Mists interface versions.
 
@@ -27,3 +30,7 @@ The TOC lists Classic Era/Anniversary, TBC and Mists interface versions.
 | `/nobio` | Toggle hiding on or off |
 | `/nobio on` / `/nobio off` | Turn hiding on or off |
 | `/nobio status` | Show whether hiding is on, and how many messages have been hidden |
+
+## License
+
+[MIT](LICENSE)
