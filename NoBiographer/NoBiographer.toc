@@ -1,0 +1,8 @@
+## Interface: 11509, 16001, 20506, 50504
+## Title: NoBiographer
+## Notes: Hides AutoBiographer milestone spam from guild chat.
+## Author: jigrobbulus
+## Version: 1.0.0
+## SavedVariables: NoBiographerDB
+
+NoBiographer.lua
